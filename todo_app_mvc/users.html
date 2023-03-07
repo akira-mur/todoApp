@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/08958affb8.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+    <script type="module" src="mvc/app.js"></script>
+</head>
+
+<body>
+    <div class="sign-out">
+        <button class="sign-out-button hover_button" id="logout-btn">Sign-out</button>
+    </div>
+    <div class="container">
+        <form id="form" class="todo-form">
+            <div>
+                <label for="todos">Дела:</label>
+                <input type="text" id="todos" required>
+            </div>
+        </form>
+        <div id="todo-container">
+        </div>
+        <div class="buttons">
+            <button id="all" class="button button1 hover_button filterHandler" data-status='all'>All</button>
+            <button id="open" class="button button2 hover_button filterHandler" data-status="open">Open</button>
+            <button id="finished" class="button button3 hover_button filterHandler"
+                data-status="completed">Finished</button>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
